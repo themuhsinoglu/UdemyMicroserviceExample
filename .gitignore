@@ -395,4 +395,19 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+.idea/modules.xml
+.idea/*.iml
+.idea/*.iws
+
+# Rider logs and other temporary files
+*.sln.iml
+*.dotSettings
+*.dotSettings.user
+.idea/*.name
 *.sln.iml
