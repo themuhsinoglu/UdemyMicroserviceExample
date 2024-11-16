@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13BA8AC7-1C0E-41A6-8D14-88EBDFE2BFAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{7F75337C-E52C-4847-B471-411A285C5332}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "catalog", "catalog", "{56E4AEDE-7838-4B19-A800-9A2E4A0B8B7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceExample.Catalog.API", "MicroserviceExample.Catalog.API\MicroserviceExample.Catalog.API.csproj", "{BD25463B-7591-4378-A4EB-AD3404637B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F75337C-E52C-4847-B471-411A285C5332} = {13BA8AC7-1C0E-41A6-8D14-88EBDFE2BFAC}
+		{56E4AEDE-7838-4B19-A800-9A2E4A0B8B7F} = {7F75337C-E52C-4847-B471-411A285C5332}
+		{BD25463B-7591-4378-A4EB-AD3404637B1C} = {56E4AEDE-7838-4B19-A800-9A2E4A0B8B7F}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD25463B-7591-4378-A4EB-AD3404637B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD25463B-7591-4378-A4EB-AD3404637B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD25463B-7591-4378-A4EB-AD3404637B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD25463B-7591-4378-A4EB-AD3404637B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
