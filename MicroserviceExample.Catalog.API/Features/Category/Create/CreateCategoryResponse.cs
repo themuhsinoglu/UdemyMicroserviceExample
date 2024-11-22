@@ -1,6 +1,3 @@
 namespace MicroserviceExample.Catalog.API.Features.Category.Create;
 
-public class CreateCategoryResponse
-{
-    
-}
+public record CreateCategoryResponse(Guid Id);

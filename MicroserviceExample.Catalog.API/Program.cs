@@ -1,3 +1,4 @@
+using MicroserviceExample.Catalog.API.Features.Category;
 using MicroserviceExample.Catalog.API.Options;
 using MicroserviceExample.Catalog.API.Repositories;
 
@@ -9,7 +10,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddOptionsExt();
 builder.Services.AddDatabaseServiceExt();
 
+
 var app = builder.Build();
+
+app.AddCategoryGroupEndpointExt();
 
 if (app.Environment.IsDevelopment())
 {
