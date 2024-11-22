@@ -113,8 +113,15 @@ public class ServiceResult<T> : ServiceResult
     public static ServiceResult<T> SuccessAsOk(T data) =>
         new ServiceResult<T> { Status = HttpStatusCode.OK, Data = data };
 
-    public static ServiceResult<T> SuccessAsCreated(T data, string url) => new ServiceResult<T>
-        { Status = HttpStatusCode.Created, Data = data, UrlAsCreated = url };
+    public static ServiceResult<T> SuccessAsCreated(T data, string url)
+    {
+       return new ServiceResult<T>
+       {
+           Status = HttpStatusCode.Created,
+           Data = data, 
+           UrlAsCreated = url
+       };
+    }
 
     public new static ServiceResult<T> ErrorFromProblemDetails(ApiException exception)
     {
