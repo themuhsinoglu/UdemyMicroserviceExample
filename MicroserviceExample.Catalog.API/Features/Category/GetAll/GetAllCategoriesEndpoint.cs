@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MicroserviceExample.Catalog.API.Features.Category.GetAll;
 
-public class GetAllCategoriesQuery : IRequest<ServiceResult<List<CategoryDto>>>;
+public record GetAllCategoriesQuery : IRequest<ServiceResult<List<CategoryDto>>>;
 
 public class GetAllCategoryQueryHandler(AppDbContext context, IMapper mapper)
     : IRequestHandler<GetAllCategoriesQuery, ServiceResult<List<CategoryDto>>>
