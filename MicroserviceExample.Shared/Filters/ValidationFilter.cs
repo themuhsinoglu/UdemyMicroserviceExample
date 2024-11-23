@@ -8,28 +8,18 @@ public class ValidationFilter<T> : IEndpointFilter
 {
     public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
     {
-        
         var validator = context.HttpContext.RequestServices.GetService<IValidator<T>>();
 
-        if (validator == null)
-        {
-            return await next(context);
-        }
+        if (validator == null) return await next(context);
 
         var requestModel = context.Arguments.OfType<T>().FirstOrDefault();
 
-        if (requestModel == null)
-        {
-            return await next(context);
-        }
-        
+        if (requestModel == null) return await next(context);
+
         var validateResult = await validator.ValidateAsync(requestModel);
 
-        if (!validateResult.IsValid)
-        {
-            return Results.ValidationProblem(validateResult.ToDictionary());
-        }
-        
+        if (!validateResult.IsValid) return Results.ValidationProblem(validateResult.ToDictionary());
+
         return await next(context);
     }
 }

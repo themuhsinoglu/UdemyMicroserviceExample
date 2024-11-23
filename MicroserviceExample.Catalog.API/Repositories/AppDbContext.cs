@@ -16,7 +16,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
         var optionsBuilder =
             new DbContextOptionsBuilder<AppDbContext>().UseMongoDB(database.Client,
                 database.DatabaseNamespace.DatabaseName);
-        
+
         return new AppDbContext(optionsBuilder.Options);
     }
 

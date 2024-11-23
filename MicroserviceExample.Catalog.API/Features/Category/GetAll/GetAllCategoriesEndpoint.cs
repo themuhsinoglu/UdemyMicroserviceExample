@@ -16,7 +16,7 @@ public class GetAllCategoryQueryHandler(AppDbContext context, IMapper mapper)
     public async Task<ServiceResult<List<CategoryDto>>> Handle(GetAllCategoriesQuery request,
         CancellationToken cancellationToken)
     {
-        var categories = await context.Categories.ToListAsync(cancellationToken: cancellationToken);
+        var categories = await context.Categories.ToListAsync(cancellationToken);
 
         var categoriesAsDto = mapper.Map<List<CategoryDto>>(categories);
 
