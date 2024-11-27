@@ -411,3 +411,4 @@ FodyWeavers.xsd
 *.dotSettings.user
 .idea/*.name
 *.sln.iml
+.env
