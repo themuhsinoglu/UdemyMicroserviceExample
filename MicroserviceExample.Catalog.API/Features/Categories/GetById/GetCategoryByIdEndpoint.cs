@@ -1,15 +1,8 @@
-using System.Net;
-using System.Text.RegularExpressions;
-using AutoMapper;
-using MediatR;
-using MicroserviceExample.Catalog.API.Features.Category.Dtos;
-using MicroserviceExample.Catalog.API.Repositories;
-using MicroserviceExample.Shared;
-using MicroserviceExample.Shared.Extensions;
+using MicroserviceExample.Catalog.API.Features.Categories.Dtos;
 
-namespace MicroserviceExample.Catalog.API.Features.Category.GetById;
+namespace MicroserviceExample.Catalog.API.Features.Categories.GetById;
 
-public record GetCategoryByIdQuery(Guid Id) : IRequest<ServiceResult<CategoryDto>>;
+public record GetCategoryByIdQuery(Guid Id) : IRequestByServiceResult<CategoryDto>;
 
 public class GetCategoryByIdQueryHandler(AppDbContext context, IMapper mapper) : IRequestHandler<GetCategoryByIdQuery, ServiceResult<CategoryDto>>
 {

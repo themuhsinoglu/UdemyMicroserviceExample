@@ -1,4 +1,4 @@
-namespace MicroserviceExample.Catalog.API.Features.Course;
+namespace MicroserviceExample.Catalog.API.Features.Courses;
 
 public class Feature
 {

@@ -1,4 +1,4 @@
-using MicroserviceExample.Catalog.API.Features.Course;
+using MicroserviceExample.Catalog.API.Features.Courses;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MongoDB.EntityFrameworkCore.Extensions;

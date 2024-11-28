@@ -1,5 +1,5 @@
 using MicroserviceExample.Catalog.API;
-using MicroserviceExample.Catalog.API.Features.Category;
+using MicroserviceExample.Catalog.API.Features.Categories;
 using MicroserviceExample.Catalog.API.Options;
 using MicroserviceExample.Catalog.API.Repositories;
 using MicroserviceExample.Shared.Extensions;

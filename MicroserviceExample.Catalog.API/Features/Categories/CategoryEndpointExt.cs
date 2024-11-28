@@ -1,8 +1,8 @@
-using MicroserviceExample.Catalog.API.Features.Category.Create;
-using MicroserviceExample.Catalog.API.Features.Category.GetAll;
-using MicroserviceExample.Catalog.API.Features.Category.GetById;
+using MicroserviceExample.Catalog.API.Features.Categories.Create;
+using MicroserviceExample.Catalog.API.Features.Categories.GetAll;
+using MicroserviceExample.Catalog.API.Features.Categories.GetById;
 
-namespace MicroserviceExample.Catalog.API.Features.Category;
+namespace MicroserviceExample.Catalog.API.Features.Categories;
 
 public static class CategoryEndpointExt
 {
