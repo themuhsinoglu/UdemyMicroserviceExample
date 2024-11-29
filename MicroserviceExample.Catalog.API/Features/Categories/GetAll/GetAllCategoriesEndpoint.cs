@@ -21,7 +21,8 @@ public static class GetAllCategoriesEndpoint
     public static RouteGroupBuilder GetAllCategoryGroupItemEndpoint(this RouteGroupBuilder group)
     {
         group.MapGet("/",
-            async (IMediator mediator) => (await mediator.Send(new GetAllCategoriesQuery())).ToGenericResult());
+            async (IMediator mediator) => (await mediator.Send(new GetAllCategoriesQuery())).ToGenericResult())
+            .WithName("GetAllCategories");
 
         return group;
     }
