@@ -30,7 +30,8 @@ public static class GetByCourseByIdEndpoint
     {
         group.MapGet("/{id:guid}", async (IMediator mediator, Guid id)=>
             (await mediator.Send(new GetCourseByIdQuery(id))).ToGenericResult())
-            .WithName("GetByCourseById");
+            .WithName("GetByCourseById")
+            .MapToApiVersion(1,0);
 
         return group;
     }

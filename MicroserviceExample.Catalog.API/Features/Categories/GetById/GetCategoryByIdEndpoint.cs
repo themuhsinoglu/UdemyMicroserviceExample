@@ -25,7 +25,8 @@ public static class GetCategoryByIdEndpoint
     {
         group.MapGet("/{id:guid}", async (IMediator mediator, Guid id) =>
             (await mediator.Send(new GetCategoryByIdQuery(id))).ToGenericResult())
-            .WithName("GetByIdCategory");
+            .WithName("GetByIdCategory")
+            .MapToApiVersion(1,0);
         
         return group;
     }

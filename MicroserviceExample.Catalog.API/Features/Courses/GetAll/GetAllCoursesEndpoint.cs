@@ -28,7 +28,9 @@ public static class GetAllCoursesEndpoint
     public static RouteGroupBuilder GetAllCourseGroupItemEndpoint(this RouteGroupBuilder group)
     {
         group.MapGet("/", async (IMediator mediator) =>
-            (await mediator.Send(new GetAllCoursesQuery())).ToGenericResult()).WithName("GetAllCourses");
+            (await mediator.Send(new GetAllCoursesQuery())).ToGenericResult())
+            .WithName("GetAllCourses")
+            .MapToApiVersion(1,0);
 
         return group;
     }

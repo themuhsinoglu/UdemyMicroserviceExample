@@ -9,7 +9,9 @@ public static class CreateCourseEndpoint
         group.MapPost("/",
                 async (CreateCourseCommand command, IMediator mediator) =>
                     (await mediator.Send(command)).ToGenericResult())
-            .WithName("CreateCourse").AddEndpointFilter<ValidationFilter<CreateCourseCommand>>();
+            .WithName("CreateCourse")
+            .MapToApiVersion(1,0)
+            .AddEndpointFilter<ValidationFilter<CreateCourseCommand>>();
 
         return group;
     }

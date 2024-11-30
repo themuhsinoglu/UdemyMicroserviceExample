@@ -22,7 +22,8 @@ public static class GetAllCategoriesEndpoint
     {
         group.MapGet("/",
             async (IMediator mediator) => (await mediator.Send(new GetAllCategoriesQuery())).ToGenericResult())
-            .WithName("GetAllCategories");
+            .WithName("GetAllCategories")
+            .MapToApiVersion(1,0);
 
         return group;
     }
